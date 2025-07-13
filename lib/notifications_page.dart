@@ -34,7 +34,7 @@ class NotificationsPage extends StatelessWidget {
       ),
     ];
 
-    // Dinamik + sabit birleştir
+    // Dinamic + static
     final allNotifications = [...dynamicNotifications, ...staticNotifications];
 
     return Scaffold(

@@ -91,7 +91,6 @@ class NotificationService extends ChangeNotifier {
     final sentSet = _sentThresholds[binName] ?? <String>{};
 
     if (fillLevel <= 10 && !sentSet.contains('empty')) {
-      // 🔄 Sıfırla: Kutu boşaldıysa diğer eşikleri yeniden tetikleyebiliriz
       resetThresholdsForBin(binName);
       _markThresholdSent(binName, 'empty');
 
