@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'login_page.dart';
 import 'trash_bins_list_page.dart';
@@ -14,11 +15,12 @@ import 'services/bluetooth_service.dart';
 import 'services/notification_service.dart';
 
 Future<void> main() async {
+  await dotenv.load();
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp(
     options: FirebaseOptions(
-      apiKey: "AIzaSyDnz20Cx3S-YoylFTOr6znONXDrorUhMHw",
+      apiKey: dotenv.env['GOOGLE_API_KEY']  ?? '',
       appId: "1:291035837946:android:7f21f526f2c4c4decfe043",
       messagingSenderId: "291035837946",
       projectId: "ago-bin-vert",
