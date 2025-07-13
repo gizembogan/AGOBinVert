@@ -20,7 +20,7 @@ Future<void> main() async {
 
   await Firebase.initializeApp(
     options: FirebaseOptions(
-      apiKey: dotenv.env['GOOGLE_API_KEY']  ?? '',
+      apiKey: dotenv.env['FIREBASE_API_KEY']  ?? '',
       appId: "1:291035837946:android:7f21f526f2c4c4decfe043",
       messagingSenderId: "291035837946",
       projectId: "ago-bin-vert",
